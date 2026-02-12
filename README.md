@@ -1,4 +1,4 @@
-# visuva.site —— 一个支持个人私有图库、企业团队共享与开放素材平台的高性能轻量级图片协作平台
+# visuva.site —— 一个支持个人私有图库、企业团队共享与开放素材平台的轻量级图片协作平台
 
 
 ## 📌 项目简介
@@ -16,7 +16,7 @@
 - **智能搜索**：支持基于颜色、标签、以图搜图等多维检索
 - **AI 扩图**：利用生成式 AI 自动扩展图片边界，提升创作效率
 - **实时协作**：多人同时编辑同一图片，操作实时同步
-- **全链路性能优化**：
+- **性能优化**：
   - 图片上传：分片 + 断点续传 + WebP 压缩 + 秒传
   - 图片加载：懒加载 + 缩略图 + CDN 加速
   - 数据查询：多级缓存（Caffeine + Redis）+ 分库分表
@@ -32,14 +32,14 @@
 - **权限**：Sa-Token
 - **实时通信**：WebSocket
 - **异步处理**：Disruptor 高性能队列
-- **AI 集成**：Stable Diffusion 微调模型（通过 HTTP API 调用）
+- **AI 集成**：集成阿里云百炼的AI绘图大模型
 
 ### 前端
 - **框架**：Vue 3 + Vite
 - **状态管理**：Pinia
 - **UI 组件库**：Ant Design Vue
 - **网络请求**：Axios
-- **协同编辑**：Yjs（可选集成）
+- **协同编辑**：WebSocket
 
 ## 🚀 快速启动（开发环境）
 
@@ -48,13 +48,12 @@
 ```bash
 # 1. 克隆项目
 git clone https://github.com/LvTianT/visuva.git
-cd visuva
+cd picture-master
 
 # 2. 启动后端
-cd backend
-./mvnw spring-boot:run
+cd picture-master/picture-master
 
 # 3. 启动前端
-cd ../frontend
+cd picture-master/picture-frontend
 npm install
 npm run dev
