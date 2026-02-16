@@ -1,0 +1,28 @@
+{
+  //src目录下类型检查配置
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "node_modules/@vue/runtime-core/dist/runtime-core.d.ts"
+  ],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "strict": false, // 改为 false，放宽检查
+    // 关闭严格的空值检查
+    "strictNullChecks": false,
+    // 允许隐式的 any 类型（不推荐长期开启）
+    "noImplicitAny": false,
+    "composite": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "allowImportingTsExtensions": true,
+    "moduleResolution": "node",   // 👈 改成这个
+    "esModuleInterop": true,      // 👈 确保开启
+    "allowSyntheticDefaultImports": true ,// 👈 建议加上
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
