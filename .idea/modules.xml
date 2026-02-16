@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/picture-master.iml" filepath="$PROJECT_DIR$/.idea/picture-master.iml" />
-      <module fileurl="file://$PROJECT_DIR$/picture-master/yu-picture-backend.iml" filepath="$PROJECT_DIR$/picture-master/yu-picture-backend.iml" />
+      <module fileurl="file://$PROJECT_DIR$/picture-master/picture-master.iml" filepath="$PROJECT_DIR$/picture-master/picture-master.iml" />
     </modules>
   </component>
 </project>
